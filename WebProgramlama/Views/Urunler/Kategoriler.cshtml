@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WebProgramlama.Models.Urunler>
+    @{
+        ViewBag.Title = "Kategoriler";
+    }
+
+    <div class="col-md-12" style="margin-top:40px;">
+
+
+        @foreach (var x in Model)
+        {
+            <div class="col-md-3">
+                <a class="img-rounded" href="~/@x.UrunFotografi"
+                   itemprop="name" style="padding-bottom:inherit">
+                    <img src="~/@x.UrunFotografi" height="280" width="220" />
+                </a>
+                <div class="product_title">
+                    <a href="@x.UrunAdi" class="modal-title">@x.UrunAdi</a>
+                </div>
+</div>
+
+
+        }
+
+    </div>

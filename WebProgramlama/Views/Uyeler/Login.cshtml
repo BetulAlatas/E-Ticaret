@@ -1,0 +1,116 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş</title>
+
+
+    <link rel="stylesheet" href="~/Content/_reset.css">
+
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="~/Content/_style.css">
+
+
+
+</head>
+<body>
+
+    <div class="pen-title">
+
+        <h1>Kullanıcı Girişi</h1>
+
+    </div>
+
+    <div class="container">
+        <div class="card"></div>
+        <div class="card">
+            <h1 class="title">GİRİŞ</h1>
+            <form action="Login" method="post">
+                <div class="input-container">
+                    <input type="text" name="KullaniciAdi" required="required" />
+                    <label for="KullaniciAdi">Kullanıcı Adı</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="Sifre" required="required" />
+                    <label for="Sifre">Sifre</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="button-container">
+                    <button><span>Giriş</span></button>
+                </div>
+
+            </form>
+        </div>
+        <div class="card alt">
+            <div class="toggle"></div>
+            <h1 class="title">
+                Yeni Kullanıcı
+
+            </h1>
+            <form action="YeniKullanici" method="post">
+                <div class="input-container">
+                    <input type="text" name="Adi" required="required" />
+                    <label for="Adi">Adı</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="Soyadi" required="required" />
+                    <label for="Soyadi">Soyadı</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="KullaniciAdi" required="required" />
+                    <label for="KullaniciAdi">Kullanıcı Adı</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="Sifre" required="required" />
+                    <label for="Sifre">Sifre</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="SifreTekrar" required="required" />
+                    <label for="SifreTekrar">Sifre Tekrar</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="datetime" name="KayitTarihi" required="required" />
+                    <label for="KayitTarihi">KayitTarihi</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="Fotograf" required="required" />
+                    <label for="Fotograf">Fotograf</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="Sehir" required="required" />
+                    <label for="Sehir">Sehir</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="Telefon" required="required" />
+                    <label for="Telefon">Telefon</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="button-container">
+                    <button><span>Kaydet</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <a id="portfolio" href="http://andytran.me/" title="View my portfolio!"><i class="fa fa-link"></i></a>
+    <a id="codepen" href="http://codepen.io/andytran/" title="Follow me!"><i class="fa fa-codepen"></i></a>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="~/js/_index.js"></script>
+
+
+
+</body>
+</html>

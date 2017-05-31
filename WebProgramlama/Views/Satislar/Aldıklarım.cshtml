@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebProgramlama.Models.Urunler>
+@{
+    ViewBag.Title = "Aldıklarım";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Aldığım Ürünler</h2>
+
+@foreach (var x in Model)
+{
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Ürün Adı</th>
+                    <td>@x.UrunAdi</td>
+                </tr>
+                <tr>
+                    <th>Fiyatı</th>
+                    <td>@x.Fiyati</td>
+                </tr>
+                <tr>
+                    <th>Şehir</th>
+                    <td>@x.Sehir</td>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+
+
+
+}

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>2. El Alışveriş</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
+
+
+
+</head>
+<body style="height:600px">
+
+    <div class="header">
+
+       
+        <div class="col-md-12">
+            <form action="~/Urunler/Arama" method="post">
+                <div class="col-md-4" style="margin-top:20px">
+                    <input type="text" name="Kriter" placeholder="@Resource.Home.Arama" size="35" style="padding:2px 2px 2px 2px; height:33px; font-family:'Comic Sans MS'; font-size:15px" />
+                </div>
+                <div class="col-md-2" style="margin-top:20px">
+                    <input type="text" name="Sehir" placeholder="@Resource.Home.Sehir" size="20" style="padding:2px 2px 2px 2px; height:33px;  font-family:'Comic Sans MS'; font-size:15px" />
+                </div>
+
+                <div class="col-md-1" style="margin-top:20px">
+                    <button type="submit" class="btn btn-primary" style="margin-left:50px">
+                        <span class="glyphicon glyphicon-search"></span>@Resource.Home.ara
+                    </button>
+                </div>
+            </form>
+
+            <form action="" method="post">
+
+                <div class="col-md-5" style="margin-top:5px;">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-4">
+                        <a href="~/Urunler/Ekle">
+                            <button type="button" class="btn btn-primary">@Resource.Home.Sat</button>
+                        </a>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                @Resource.Home.Giriş
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="~/Satislar/Satislar/">Sattığım Ürünler</a></li>
+                                <li><a href="~/Satislar/Aldıklarım">Aldığım Ürünler</a></li>
+                                @if (Convert.ToInt32(Session["Giris"]) == 1)
+                                {
+                                    <li><a href="~/Uyeler/Cikis">Çıkış Yap</a></li>
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                @Resource.Home.dil
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                               <li><a href="~/Language/Change/?LanguageAbbrevation=tr">Tr</a></li>                              
+                                <li><a href="~/Language/Change/?LanguageAbbrevation=en">En</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <br />
+
+
+
+
+
+
+    <div class="col-md-12">
+        <div class="col-md-2">
+            <div class="left_content">
+                <div class="title_box">@Resource.Home.kategoriler</div>
+                <ul class="left_menu">
+                    <li class="odd"><a href="~/Urunler/Kategoriler/?id=1">@Resource.Home.elektronik</a></li>
+                    <li class="even"> <a href="~/Urunler/Kategoriler/?id=3">@Resource.Home.Giyim</a></li>
+                    <li class="odd"><a href="~/Urunler/Kategoriler/?id=4">@Resource.Home.araba</a></li>
+                    <li class="even"><a href="~/Urunler/Kategoriler/?id=5">@Resource.Home.ev</a></li>
+                    <li class="odd"><a href="~/Urunler/Kategoriler/?id=6">@Resource.Home.kitap</a></li>
+                </ul>
+
+
+
+            </div>
+
+
+        </div>
+        <div class="col-md-10">
+            @RenderBody()
+        </div>
+    </div>
+
+
+
+
+
+    <div class="col-md-12">
+        <div class="customfooter">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>@Resource.Home.ulaşım</p>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.facebook.com/">
+                        <i class="fa-facebook">
+                            <img src="~/images/images.png" />
+                        </i>
+                    </a>
+                    <a href="https://twitter.com/?lang=tr">
+                        <i class="fa-facebook">
+                            <img src="~/images/tw.png" />
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="~/js/boxOver.js"></script>
+<script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

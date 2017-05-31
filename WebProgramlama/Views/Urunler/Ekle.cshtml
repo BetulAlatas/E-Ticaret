@@ -1,0 +1,73 @@
+﻿@model IEnumerable <WebProgramlama.Models.Kategoriler>
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Ürün Ekle</h2>
+
+<br />
+<br />
+
+<div>
+    <form action="Ekle" method="post" enctype="multipart/form-data">
+        <div>
+            <h5>Ürün Adı</h5>
+            <input name="UrunAdi" value="" />
+        </div>
+        <div>
+            <h5>Ürün Fiyatı</h5>
+            <input name="UrunFiyati" value="" />
+        </div>
+        <div>
+            <h5>Eklenme Tarihi</h5>
+            <input name="EklenmeTarihi" value="" type="datetime" />
+        </div>
+        <div>
+            <h5>Fotoğraf</h5>
+            <input enctype="multipart/form-data" type="file" name="Fotograf" accept="image/*" value="" />
+        </div>
+       
+        <div>
+            <h5>Kategori</h5>  
+            <select name="id2">
+               @foreach (var item in Model)
+                  {
+                    <option name="id2" value="@item.KategoriID">@item.KategoriAdi</option>
+                  }
+             </select>
+        
+            <br />
+
+            
+        </div>
+        <br />
+        <input type="Submit" value="Ekle" />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+
+
+
+    </form>
+
+
+</div>
+
+
+
